@@ -12,7 +12,7 @@ iphones_for_rent = [
 
 @app.route('/')
 def home():
-    return "Selamat datang di API Sewa iPhone! Kunjungi /api/iphones untuk daftar iPhone."
+    return "/api/phones untuk menggunakan api"
 
 @app.route('/api/iphones', methods=['GET'])
 def get_iphones():
