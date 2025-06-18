@@ -1,6 +1,8 @@
 from flask import Flask, jsonify
+import os
 
 app = Flask(__name__)
+#s
 
 @app.route('/api/data')
 def get_data():
@@ -15,9 +17,6 @@ def get_data():
     }
     return jsonify(data)
 
-@app.route('/')
-def home():
-    return "Welcome to the API! Try navigating to /api/data to see the JSON output."
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
