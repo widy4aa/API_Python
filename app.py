@@ -2,7 +2,6 @@ from flask import Flask, jsonify
 import os
 
 app = Flask(__name__)
-#s
 
 @app.route('/api/data')
 def get_data():
